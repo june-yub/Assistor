@@ -12,6 +12,8 @@ struct AssistorApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                
         }
+        
     }
 }

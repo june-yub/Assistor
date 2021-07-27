@@ -11,6 +11,7 @@
 		955DDBD326AF85EC005F176B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DDBD226AF85EC005F176B /* ContentView.swift */; };
 		955DDBD526AF85EF005F176B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 955DDBD426AF85EF005F176B /* Assets.xcassets */; };
 		955DDBD826AF85EF005F176B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 955DDBD726AF85EF005F176B /* Preview Assets.xcassets */; };
+		955DDBE226B0C08A005F176B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 955DDBE126B0C08A005F176B /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		955DDBD726AF85EF005F176B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		955DDBD926AF85EF005F176B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		955DDBDA26AF85EF005F176B /* Assistor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Assistor.entitlements; sourceTree = "<group>"; };
+		955DDBE126B0C08A005F176B /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 		955DDBCF26AF85EC005F176B /* Assistor */ = {
 			isa = PBXGroup;
 			children = (
+				955DDBE026B0C076005F176B /* Menu */,
 				955DDBD026AF85EC005F176B /* AssistorApp.swift */,
 				955DDBD226AF85EC005F176B /* ContentView.swift */,
 				955DDBD426AF85EF005F176B /* Assets.xcassets */,
@@ -69,6 +72,14 @@
 				955DDBD726AF85EF005F176B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		955DDBE026B0C076005F176B /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				955DDBE126B0C08A005F176B /* MenuView.swift */,
+			);
+			path = Menu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				955DDBD326AF85EC005F176B /* ContentView.swift in Sources */,
+				955DDBE226B0C08A005F176B /* MenuView.swift in Sources */,
 				955DDBD126AF85EC005F176B /* AssistorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
