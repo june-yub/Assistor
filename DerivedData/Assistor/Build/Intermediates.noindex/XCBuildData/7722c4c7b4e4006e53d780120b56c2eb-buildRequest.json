@@ -1,0 +1,51 @@
+{
+  "buildCommand" : "prepareForIndexing",
+  "configuredTargets" : [
+    {
+      "guid" : "0e22dfc8df6584370a22d8987d4cb70bcab9c52725fb2cc0c2922a7d7a98fe0a"
+    }
+  ],
+  "continueBuildingAfterErrors" : true,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "x86_64h",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx11.3",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "x86_64h",
+        "x86_64"
+      ],
+      "targetArchitecture" : "x86_64h"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/junyeopjeon/MacDev/Assistor/DerivedData/Assistor/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/junyeopjeon/MacDev/Assistor/DerivedData/Assistor/Build/Products",
+      "derivedDataPath" : "/Users/junyeopjeon/MacDev/Assistor/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/junyeopjeon/MacDev/Assistor/DerivedData/Assistor/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/junyeopjeon/MacDev/Assistor/DerivedData/Assistor/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/junyeopjeon/MacDev/Assistor/DerivedData/Assistor/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "qos" : "default",
+  "schemeCommand" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : true,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}
