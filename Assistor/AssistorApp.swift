@@ -16,7 +16,7 @@ struct AssistorApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            //ContentView()
+            ContentView()
 
         }
 
@@ -79,7 +79,6 @@ class AppDelegate: NSObject,NSApplicationDelegate
                 self.popOver.show(relativeTo: menuButton.bounds, of: menuButton, preferredEdge: NSRectEdge.minY)
             }
         }
-        
         
     }
 }
