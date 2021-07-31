@@ -4,6 +4,10 @@
 //
 //  Created by Junyeop Jeon on 7/27/21.
 //
+/*
+ Source of images :
+    cactus6 : https://icons8.com/icons/set/cactus
+*/
 
 import SwiftUI
 
@@ -79,4 +83,6 @@ class AppDelegate: NSObject,NSApplicationDelegate
         }
         
     }
+    
 }
+

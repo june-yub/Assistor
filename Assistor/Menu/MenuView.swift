@@ -5,6 +5,14 @@
 //  Created by Junyeop Jeon on 7/28/21.
 //
 
+/*
+ Source of images :
+    autopilot2 : https://www.flaticon.com/free-icon/autopilot_1972885
+    crashicon3 : https://www.iconfinder.com/icons/3465610/accident_car_collision_crash_damage_traffic_vehicle_icon
+    escape4 : https://icons8.com/icons/set/escape
+ */
+
+
 import SwiftUI
 
 struct MenuView: View {
@@ -18,31 +26,34 @@ struct MenuView: View {
             HStack
             {
                 Image("crashicon3")
-            VStack
-            {
-                
-            Text("Crash Detection")
-                .font(.callout)
-                .fontWeight(.semibold)
-                .foregroundColor(.primary)
-                //.frame(width: 30, height: 30, alignment: .leading)
-                .padding(1)
-            HStack
-            {
-                TabButton(title: "On",
-                          currentTab: $currentTab,
-                          animation: animation)
-                    .frame(width: 50, height: 20)
                     
-                TabButton(title: "Off",
-                          currentTab: $currentTab,
-                          animation: animation)
-                    .frame(width: 50, height: 20)
-                
-                Image(systemName: "bell.fill")
-            }
-            //.padding(.horizontal)
-            }
+                VStack
+                {
+                    Text("Crash Detection")
+                        .font(.callout)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.primary)
+                        .frame(width: 130, height: 30, alignment: .leading)
+                        .padding(0)
+                    
+                    HStack
+                    {
+                        TabButton(title: "On",
+                                  currentTab: $currentTab,
+                                  animation: animation)
+                            .frame(width: 50, height: 20)
+                            
+                        TabButton(title: "Off",
+                                  currentTab: $currentTab,
+                                  animation: animation)
+                            .frame(width: 50, height: 20)
+                        
+                        Image(systemName: "bell.fill")
+                            .foregroundColor(.clear)
+                    }
+                    .padding(.horizontal,5)
+                    .padding(.bottom,1)
+                }
             }
             
             // Divider..
@@ -51,26 +62,27 @@ struct MenuView: View {
             
             HStack
             {
-                Text("Automation..")
+                Image("autopilot2")
+            
+                //Spacer(minLength: 0)
+                Text("Automation")
                     .font(.callout)
                     .fontWeight(.semibold)
                     .foregroundColor(.primary)
-                
+                Spacer(minLength: 0)
                 Button(action: {}, label: {
-                    Image(systemName: "square.and.arrow.up")
+                    Image(systemName: "square.and.arrow.down")
                         .foregroundColor(.primary)
                 })
+                .buttonStyle(PlainButtonStyle())
+                Button(action: {}, label: {
+                    Image(systemName: "trash")
+                        .foregroundColor(.primary)
+                    
+                })
+                .buttonStyle(PlainButtonStyle())
             }
-            
-            Image("yoojung")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(30)
-            
-           
-            
-            Spacer(minLength: 15)
-                
+            .padding(.horizontal)
             
             Divider()
                 .padding(.bottom,4)
@@ -78,16 +90,27 @@ struct MenuView: View {
             //Bottom View..
             HStack
             {
-                Image("escape")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 25, height: 25)
-                    .clipShape(Circle())
                 
-                Text("Quit")
-                    .font(.callout)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.primary)
+                Button(action: {
+                    //quit()
+                },
+                       label: {
+                    Image("escape4")
+                        .resizable()
+                        //.aspectRatio(contentMode: .fill)
+                        .frame(width: 30, height: 30, alignment: .leading)
+                        //.clipShape(Circle())
+                        .font(.callout)
+                        //.offset(y:2)
+                        
+                    Text("Quit")
+                        .font(.callout)
+                        .fontWeight(.semibold)
+                        .foregroundColor(.primary)
+                        //.offset(y:2)
+                })
+//                .frame(width: 70, height: 30)
+//                .buttonStyle(PlainButtonStyle())
                 
                 Spacer(minLength: 0)
                 
@@ -98,13 +121,17 @@ struct MenuView: View {
                 .buttonStyle(PlainButtonStyle())
             }
             .padding(.horizontal)
-            .padding(.bottom)
+            //.padding(.bottom)
         }
         // Max Menu Size...
         // Your own Size...
-        .frame(width: 230, height: 300)
+        .frame(width: 230, height: 160)
     }
 }
+//func quit()
+//{
+//    //NSApplication.shared.terminate(AppDelegate.self)
+//}
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
@@ -123,7 +150,6 @@ struct TabButton: View
             withAnimation
             {
                 currentTab = title
-                
             }
         }, label: {
             Text(title)
@@ -140,9 +166,16 @@ struct TabButton: View
                         if currentTab == title
                         {
                             RoundedRectangle(cornerRadius: 4)
-                                .fill(Color.blue)
-                                .matchedGeometryEffect(id: "TAB", in: animation)
                                 
+                                .matchedGeometryEffect(id: "TAB", in: animation)
+//                            if title == "On"
+//                            {
+//                                RoundedRectangle(cornerRadius: 4).fill(Color.blue)
+//                            }
+//                            else
+//                            {
+//                                RoundedRectangle(cornerRadius: 4).fill(Color.orange)
+//                            }
                         }
                         else
                         {
@@ -157,3 +190,5 @@ struct TabButton: View
         .buttonStyle(PlainButtonStyle())
     }
 }
+
+
