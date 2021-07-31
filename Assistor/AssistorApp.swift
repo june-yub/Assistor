@@ -9,17 +9,14 @@ import SwiftUI
 
 @main
 struct AssistorApp: App {
-    init() {
-    
-    }
-    
+
     @NSApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    
     var body: some Scene {
         WindowGroup {
+            // Inactive ContentView
             ContentView()
-
         }
-
     }
 }
 
@@ -53,6 +50,7 @@ class AppDelegate: NSObject,NSApplicationDelegate
         if let MenuButton = statusItem?.button
         {
             MenuButton.image = NSImage(named: "cactus6")
+            
 //            MenuButton.bezelColor = NSColor(Color.white)
 //            MenuButton.contentTintColor = NSColor(Color.white)
             

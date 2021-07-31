@@ -15,39 +15,43 @@ struct MenuView: View {
     var body: some View {
         VStack
         {
-            
             HStack
             {
-                Text("Debug Mode")
-                    .font(.callout)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.primary)
+                Image("crashicon3")
+            VStack
+            {
                 
+            Text("Crash Detection")
+                .font(.callout)
+                .fontWeight(.semibold)
+                .foregroundColor(.primary)
+                //.frame(width: 30, height: 30, alignment: .leading)
+                .padding(1)
+            HStack
+            {
                 TabButton(title: "On",
                           currentTab: $currentTab,
                           animation: animation)
                     .frame(width: 50, height: 20)
-                
+                    
                 TabButton(title: "Off",
                           currentTab: $currentTab,
                           animation: animation)
                     .frame(width: 50, height: 20)
+                
+                Image(systemName: "bell.fill")
             }
             //.padding(.horizontal)
-            .padding(.top)
+            }
+            }
             
             // Divider..
             Divider()
                 .padding(.top,0)
             
-            Image("yoojung")
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(30)
-            
             HStack
             {
-                Text("Export your artboards....")
+                Text("Automation..")
                     .font(.callout)
                     .fontWeight(.semibold)
                     .foregroundColor(.primary)
@@ -58,6 +62,13 @@ struct MenuView: View {
                 })
             }
             
+            Image("yoojung")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding(30)
+            
+           
+            
             Spacer(minLength: 15)
                 
             
@@ -67,13 +78,13 @@ struct MenuView: View {
             //Bottom View..
             HStack
             {
-                Image("drwatsonbb")
+                Image("escape")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 25, height: 25)
                     .clipShape(Circle())
                 
-                Text("iJustine")
+                Text("Quit")
                     .font(.callout)
                     .fontWeight(.semibold)
                     .foregroundColor(.primary)
@@ -81,7 +92,7 @@ struct MenuView: View {
                 Spacer(minLength: 0)
                 
                 Button(action: {}, label: {
-                    Image(systemName: "gear")
+                    Image(systemName: "gearshape.fill")
                         .foregroundColor(.primary)
                 })
                 .buttonStyle(PlainButtonStyle())
@@ -112,6 +123,7 @@ struct TabButton: View
             withAnimation
             {
                 currentTab = title
+                
             }
         }, label: {
             Text(title)
@@ -121,6 +133,7 @@ struct TabButton: View
                 .foregroundColor(currentTab == title ? .white: .primary)
                 .padding(.vertical, 4)
                 .frame(maxWidth: .infinity)
+                
                 .background(
                     ZStack
                     {
@@ -129,10 +142,11 @@ struct TabButton: View
                             RoundedRectangle(cornerRadius: 4)
                                 .fill(Color.blue)
                                 .matchedGeometryEffect(id: "TAB", in: animation)
+                                
                         }
                         else
                         {
-                            //Primary Bor
+                            //Primary Bar
                             RoundedRectangle(cornerRadius: 4)
                                 .stroke(Color.primary, lineWidth:0.6)
                         }

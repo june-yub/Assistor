@@ -12,7 +12,7 @@ struct ContentView: View {
 
         VStack
         {
-            Text("macOS Menu App")
+            Text("Inactive ContentView")
         }
         .frame(width: 300, height: 300)
     }
