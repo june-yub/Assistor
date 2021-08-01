@@ -20,6 +20,9 @@ struct MenuView: View {
     @Namespace var animation
     // Current Tab..
     @State var currentTab = "Uploads"
+    
+    let appdelegate = AppDelegate()
+    
     var body: some View {
         VStack
         {
@@ -92,7 +95,7 @@ struct MenuView: View {
             {
                 
                 Button(action: {
-                    AppDelegate.quit2(AppDelegate.self)
+                    appdelegate.quit2()
                 },
                        label: {
                     Image("escape4")
@@ -165,14 +168,14 @@ struct TabButton: View
                             RoundedRectangle(cornerRadius: 4)
                                 
                                 .matchedGeometryEffect(id: "TAB", in: animation)
-//                            if title == "On"
-//                            {
-//                                RoundedRectangle(cornerRadius: 4).fill(Color.blue)
-//                            }
-//                            else
-//                            {
-//                                RoundedRectangle(cornerRadius: 4).fill(Color.orange)
-//                            }
+                            if title == "On"
+                            {
+                                RoundedRectangle(cornerRadius: 4).fill(Color.blue)
+                            }
+                            else
+                            {
+                                RoundedRectangle(cornerRadius: 4).fill(Color.orange)
+                            }
                         }
                         else
                         {

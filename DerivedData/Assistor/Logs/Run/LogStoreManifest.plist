@@ -5,6 +5,41 @@
 	<key>logFormatVersion</key>
 	<integer>10</integer>
 	<key>logs</key>
-	<dict/>
+	<dict>
+		<key>E3CC7D8E-DD54-4BA5-A76C-8E08C80C17AF</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>E3CC7D8E-DD54-4BA5-A76C-8E08C80C17AF.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Assistor project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Assistor</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Assistor</string>
+			<key>timeStartedRecording</key>
+			<real>649479107.798455</real>
+			<key>timeStoppedRecording</key>
+			<real>649479130.15838504</real>
+			<key>title</key>
+			<string>Run Assistor</string>
+			<key>uniqueIdentifier</key>
+			<string>E3CC7D8E-DD54-4BA5-A76C-8E08C80C17AF</string>
+		</dict>
+	</dict>
 </dict>
 </plist>
