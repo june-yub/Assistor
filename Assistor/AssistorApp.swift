@@ -64,7 +64,7 @@ class AppDelegate: NSObject,NSApplicationDelegate
         }
     }
     
-    func quit()
+    func quit2()
     {
         NSApplication.shared.terminate(self)
     }
