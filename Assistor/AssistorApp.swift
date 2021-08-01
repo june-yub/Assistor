@@ -64,6 +64,11 @@ class AppDelegate: NSObject,NSApplicationDelegate
         }
     }
     
+    func quit()
+    {
+        NSApplication.shared.terminate(self)
+    }
+    
     // Button Action...
     @objc func MenuButtonToggles(sender: AnyObject)
     {

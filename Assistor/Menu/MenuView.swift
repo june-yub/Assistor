@@ -92,7 +92,7 @@ struct MenuView: View {
             {
                 
                 Button(action: {
-                    //quit()
+                    AppDelegate.quit(self:AppDelegate)
                 },
                        label: {
                     Image("escape4")
@@ -109,8 +109,8 @@ struct MenuView: View {
                         .foregroundColor(.primary)
                         //.offset(y:2)
                 })
-//                .frame(width: 70, height: 30)
-//                .buttonStyle(PlainButtonStyle())
+                .frame(width: 70, height: 30)
+                .buttonStyle(PlainButtonStyle())
                 
                 Spacer(minLength: 0)
                 
@@ -128,10 +128,7 @@ struct MenuView: View {
         .frame(width: 230, height: 160)
     }
 }
-//func quit()
-//{
-//    //NSApplication.shared.terminate(AppDelegate.self)
-//}
+
 
 struct MenuView_Previews: PreviewProvider {
     static var previews: some View {
