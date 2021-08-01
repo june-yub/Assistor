@@ -45,7 +45,7 @@ struct MenuView: View {
                                   currentTab: $currentTab,
                                   animation: animation)
                             .frame(width: 50, height: 20)
-                            
+                            .focusable()
                         TabButton(title: "Off",
                                   currentTab: $currentTab,
                                   animation: animation)
@@ -110,10 +110,13 @@ struct MenuView: View {
                         .font(.callout)
                         .fontWeight(.semibold)
                         .foregroundColor(.primary)
+                        //.padding()
                         //.offset(y:2)
                 })
-                .frame(width: 70, height: 30)
+                .frame(width: 65, height: 30)
                 .buttonStyle(PlainButtonStyle())
+                .offset(y:-3)
+                //.padding(.bottom)
                 
                 Spacer(minLength: 0)
                 

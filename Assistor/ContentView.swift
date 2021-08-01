@@ -10,9 +10,12 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
 
-        VStack
+        HStack
         {
-            Text("Inactive ContentView")
+            Text("Click the")
+            Image("cactus6")
+            Text("button above.")
+            
         }
         .frame(width: 300, height: 300)
     }

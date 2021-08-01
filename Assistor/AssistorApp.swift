@@ -6,7 +6,8 @@
 //
 /*
  Source of images :
-    cactus6 : https://icons8.com/icons/set/cactus
+    [MenuBar Icon] cactus6 : https://icons8.com/icons/set/cactus
+    [App Icon] Sherlock_EveryHey : Instagram/EveryHey
 */
 
 import SwiftUI
