@@ -95,7 +95,7 @@ struct MenuView: View {
             {
                 
                 Button(action: {
-                    appdelegate.quit2()
+                    let _: () = appdelegate.quit2()
                 },
                        label: {
                     Image("escape4")
