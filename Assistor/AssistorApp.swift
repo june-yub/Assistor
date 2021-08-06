@@ -86,6 +86,10 @@ class AppDelegate: NSObject,NSApplicationDelegate
                 // Top Get Button Location For popover Arroww....
                 self.popOver.show(relativeTo: menuButton.bounds, of: menuButton, preferredEdge: NSRectEdge.minY)
             }
+            else
+            {
+                assertionFailure("Failed to show Popover..")
+            }
         }
         
     }
