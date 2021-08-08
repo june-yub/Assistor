@@ -79,11 +79,19 @@ struct MenuView: View {
                     .frame(width: 100, height: 30, alignment: .leading)
                     .padding(0)
                
-                Toggle(isOn: $isDetectionOn, label:{
+                Toggle(isOn: $isDetectionOn,label:{
                     
                 })
                 .toggleStyle(SwitchToggleStyle(tint: Color.accentColor))
                 
+                
+                
+                
+//                Button(action: {}, label: {
+//                    Image(systemName: "doc.text.magnifyingglass")
+//                        .foregroundColor(.primary)
+//                })
+//                .buttonStyle(PlainButtonStyle())
             }
             
             // Divider..
@@ -105,12 +113,14 @@ struct MenuView: View {
                 Spacer(minLength: 0)
                 Button(action: {}, label: {
                     Image(systemName: "square.and.arrow.down")
-                        .foregroundColor(.primary)
+                        .foregroundColor(.gray)
+                        .help("Add")
                 })
                 .buttonStyle(PlainButtonStyle())
                 Button(action: {}, label: {
                     Image(systemName: "trash")
-                        .foregroundColor(.primary)
+                        .foregroundColor(.gray)
+                        .help("Delete")
                     
                 })
                 .buttonStyle(PlainButtonStyle())
@@ -148,15 +158,26 @@ struct MenuView: View {
                 .frame(width: 65, height: 30)
                 .buttonStyle(PlainButtonStyle())
                 .offset(y:-3)
+                .help("Terminate Assistor App")
                 //.padding(.bottom)
                 
                 Spacer(minLength: 0)
+                
+                Button(action: {}, label: {
+                    Image(systemName: "doc.text.magnifyingglass")
+                        .foregroundColor(.primary)
+                        
+                })
+                .buttonStyle(PlainButtonStyle())
+                .help("Event log")
                 
                 Button(action: {}, label: {
                     Image(systemName: "gearshape.fill")
                         .foregroundColor(.primary)
                 })
                 .buttonStyle(PlainButtonStyle())
+                .help("Preferences")
+            
             }
             .padding(.horizontal)
             //.padding(.bottom)
