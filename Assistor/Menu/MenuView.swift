@@ -21,11 +21,15 @@ struct MenuView: View {
     // Current Tab..
     @State var currentTab = "Uploads"
     
+    @State private var isDetectionOn = true
+    
     let appdelegate = AppDelegate()
     
     var body: some View {
         VStack
         {
+            Divider()
+// MARK:- Crash Detection -- Version 1
             HStack
             {
                 Image("crashicon3")
@@ -51,6 +55,7 @@ struct MenuView: View {
                                   animation: animation)
                             .frame(width: 50, height: 20)
                         
+                        
                         Image(systemName: "bell.fill")
                             .foregroundColor(.clear)
                     }
@@ -62,6 +67,31 @@ struct MenuView: View {
             // Divider..
             Divider()
                 .padding(.top,0)
+// MARK:- Crash Detection -- Version 2
+            HStack
+            {
+                Image("crashicon3")
+                
+                Text("Crash Detection")
+                    .font(.callout)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.primary)
+                    .frame(width: 100, height: 30, alignment: .leading)
+                    .padding(0)
+               
+                Toggle(isOn: $isDetectionOn, label:{
+                    
+                })
+                .toggleStyle(SwitchToggleStyle(tint: Color.accentColor))
+                
+            }
+            
+            // Divider..
+            Divider()
+                //.padding(.top,0)
+
+// MARK:- Automation
+            
             
             HStack
             {
@@ -90,6 +120,8 @@ struct MenuView: View {
             Divider()
                 .padding(.bottom,4)
             
+            
+//MARK:- Quit
             //Bottom View..
             HStack
             {
@@ -128,10 +160,11 @@ struct MenuView: View {
             }
             .padding(.horizontal)
             //.padding(.bottom)
+            Divider()
         }
         // Max Menu Size...
         // Your own Size...
-        .frame(width: 230, height: 160)
+        .frame(width: 230, height: 260)
     }
 }
 
@@ -142,6 +175,7 @@ struct MenuView_Previews: PreviewProvider {
     }
 }
 
+//MARK:- TabButton (On/Off)
 struct TabButton: View
 {
     var title: String
