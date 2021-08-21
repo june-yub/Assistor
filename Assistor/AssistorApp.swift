@@ -61,7 +61,7 @@ class AppDelegate: NSObject,NSApplicationDelegate
             
             //MenuButton.image = NSImage(systemSymbolName: "hands.clap", accessibilityDescription: "comm")
             MenuButton.action = #selector(MenuButtonToggles)
-            MenuButton.toolTip = "Tooltip"
+            MenuButton.toolTip = "Assistor"
         }
     }
     

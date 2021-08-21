@@ -98,7 +98,7 @@ struct MenuView: View {
             Divider()
                 //.padding(.top,0)
 
-// MARK:- Automation
+// MARK:- Automation Section
             
             
             HStack
@@ -131,7 +131,7 @@ struct MenuView: View {
                 .padding(.bottom,4)
             
             
-//MARK:- Quit
+//MARK:- Quit Section
             //Bottom View..
             HStack
             {
